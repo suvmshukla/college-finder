@@ -45,6 +45,11 @@ https://github.com/suvmshukla/college-finder
 * Simple recommendation engine
 
 ---
+### 5. Dynamic College Images
+
+- College-specific images
+- Dynamic image rendering from database
+- Improved user experience
 
 ## Tech Stack
 
@@ -81,6 +86,7 @@ model College {
   rating      Float
   placements  String?
   description String
+  image       String?
 }
 ```
 
