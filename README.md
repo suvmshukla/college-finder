@@ -1,36 +1,162 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CollegeFinder 🎓
 
-## Getting Started
+A full-stack College Discovery Platform built using Next.js, Prisma, Neon PostgreSQL, and Tailwind CSS.
 
-First, run the development server:
+## Live Demo
+
+https://college-finder-zeta.vercel.app
+
+## GitHub Repository
+
+https://github.com/suvmshukla/college-finder
+
+---
+
+## Features
+
+### 1. College Listing & Search
+
+* Browse colleges
+* Search colleges by name
+* Filter by location
+* Filter by rating
+
+### 2. College Detail Page
+
+* College overview
+* Fees information
+* Ratings
+* Placement information
+* Courses section
+* Reviews section
+
+### 3. Compare Colleges
+
+* Side-by-side comparison
+* Compare fees
+* Compare ratings
+* Compare placements
+* Compare locations
+
+### 4. College Predictor Tool
+
+* Enter JEE Rank
+* Get recommended colleges based on rank
+* Simple recommendation engine
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+
+### Backend
+
+* Next.js API Routes
+* Prisma ORM
+
+### Database
+
+* Neon PostgreSQL
+
+### Deployment
+
+* Vercel
+
+---
+
+## Database Schema
+
+```prisma
+model College {
+  id          Int      @id @default(autoincrement())
+  name        String
+  location    String
+  fees        Int
+  rating      Float
+  placements  String?
+  description String
+}
+```
+
+---
+
+## API Endpoints
+
+### Get All Colleges
+
+```http
+GET /api/colleges
+```
+
+### Get Single College
+
+```http
+GET /api/colleges/[id]
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/suvmshukla/college-finder.git
+```
+
+Move into project directory:
+
+```bash
+cd college-finder
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Configure environment variables:
+
+```env
+DATABASE_URL=your_neon_database_url
+```
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Future Improvements
 
-To learn more about Next.js, take a look at the following resources:
+* Authentication
+* Saved Colleges
+* Saved Comparisons
+* Advanced Predictor Logic
+* Pagination
+* Real College Dataset
+* Student Reviews System
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Author
 
-## Deploy on Vercel
+Shubham Kumar Shukla
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Built as part of a Full Stack College Discovery Platform project using Next.js, Prisma, Neon PostgreSQL, and Vercel.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
