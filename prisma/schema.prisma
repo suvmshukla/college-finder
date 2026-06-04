@@ -15,4 +15,5 @@ model College {
   rating      Float
   placements  String?
   description String
+  image       String?
 }

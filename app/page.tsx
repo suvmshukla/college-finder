@@ -103,9 +103,9 @@ export default function Home() {
             className="bg-gray-900 rounded-2xl shadow-lg p-6 hover:scale-105 transition duration-300"
           >
             <img
-              src="https://images.unsplash.com/photo-1562774053-701939374585?w=600"
-              alt="College"
-              className="rounded-xl mb-4 w-full h-48 object-cover"
+             src={college.image || "https://images.unsplash.com/photo-1562774053-701939374585?w=600"}
+             alt="College"
+             className="rounded-xl mb-4 w-full h-48 object-cover"
             />
 
             <h2 className="text-2xl font-bold mb-2">

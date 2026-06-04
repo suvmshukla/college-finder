@@ -26,9 +26,13 @@ export default async function CollegeDetails({
     <div className="min-h-screen bg-gradient-to-br from-gray-950 to-blue-950 text-white p-8">
       <div className="max-w-6xl mx-auto">
 
+        {/* Dynamic College Image */}
         <img
-          src="https://images.unsplash.com/photo-1562774053-701939374585?w=1200"
-          alt="College"
+          src={
+            college.image ||
+            "https://images.unsplash.com/photo-1562774053-701939374585?w=1200"
+          }
+          alt={college.name}
           className="w-full h-96 object-cover rounded-3xl shadow-2xl mb-8"
         />
 
@@ -58,7 +62,6 @@ export default async function CollegeDetails({
 
           </div>
 
-          {/* Overview */}
           <h2 className="text-3xl font-bold mb-4 text-blue-300">
             Overview
           </h2>
@@ -67,7 +70,6 @@ export default async function CollegeDetails({
             {college.description}
           </p>
 
-          {/* Courses */}
           <h2 className="text-3xl font-bold mb-4 text-blue-300">
             Courses
           </h2>
@@ -84,7 +86,6 @@ export default async function CollegeDetails({
             </div>
           </div>
 
-          {/* Placements */}
           <h2 className="text-3xl font-bold mb-4 text-blue-300">
             Placements
           </h2>
@@ -95,7 +96,6 @@ export default async function CollegeDetails({
             </p>
           </div>
 
-          {/* Reviews */}
           <h2 className="text-3xl font-bold mb-4 text-blue-300">
             Reviews
           </h2>
