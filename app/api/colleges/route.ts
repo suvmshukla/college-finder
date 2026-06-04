@@ -1,9 +1,21 @@
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import prisma from "@/lib/prisma";
+import { NextResponse } from "next/server";
 
 export async function GET() {
-  const colleges = await prisma.college.findMany();
+  try {
+    const colleges = await prisma.college.findMany({
+      orderBy: {
+        id: "asc",
+      },
+    });
 
-  return Response.json(colleges);
+    return NextResponse.json(colleges);
+  } catch (error) {
+    console.error(error);
+
+    return NextResponse.json(
+      { error: "Failed to fetch colleges" },
+      { status: 500 }
+    );
+  }
 }
