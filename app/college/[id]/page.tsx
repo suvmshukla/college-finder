@@ -24,7 +24,8 @@ export default async function CollegeDetails({
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 to-blue-950 text-white p-8">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
+
         <img
           src="https://images.unsplash.com/photo-1562774053-701939374585?w=1200"
           alt="College"
@@ -32,34 +33,87 @@ export default async function CollegeDetails({
         />
 
         <div className="bg-gray-900/70 p-8 rounded-3xl">
-          <h1 className="text-5xl font-bold mb-6 text-blue-400">
+
+          <h1 className="text-5xl font-bold text-blue-400 mb-6">
             {college.name}
           </h1>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="grid md:grid-cols-4 gap-6 mb-8">
+
             <div className="bg-gray-800 p-5 rounded-2xl">
-              <p className="text-lg">📍 {college.location}</p>
+              <p>📍 {college.location}</p>
             </div>
 
             <div className="bg-gray-800 p-5 rounded-2xl">
-              <p className="text-lg">💰 ₹{college.fees}</p>
+              <p>💰 ₹{college.fees}</p>
             </div>
 
             <div className="bg-gray-800 p-5 rounded-2xl">
-              <p className="text-lg">⭐ {college.rating}</p>
+              <p>⭐ {college.rating}</p>
             </div>
+
+            <div className="bg-gray-800 p-5 rounded-2xl">
+              <p>💼 {college.placements}</p>
+            </div>
+
           </div>
 
-          <p className="text-gray-300 text-lg">
+          {/* Overview */}
+          <h2 className="text-3xl font-bold mb-4 text-blue-300">
+            Overview
+          </h2>
+
+          <p className="text-gray-300 text-lg mb-8">
             {college.description}
           </p>
 
+          {/* Courses */}
+          <h2 className="text-3xl font-bold mb-4 text-blue-300">
+            Courses
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-4 mb-8">
+            <div className="bg-gray-800 p-4 rounded-xl">
+              B.Tech Computer Science
+            </div>
+            <div className="bg-gray-800 p-4 rounded-xl">
+              B.Tech Electronics
+            </div>
+            <div className="bg-gray-800 p-4 rounded-xl">
+              B.Tech Mechanical
+            </div>
+          </div>
+
+          {/* Placements */}
+          <h2 className="text-3xl font-bold mb-4 text-blue-300">
+            Placements
+          </h2>
+
+          <div className="bg-gray-800 p-6 rounded-2xl mb-8">
+            <p className="text-xl">
+              Average Package: {college.placements}
+            </p>
+          </div>
+
+          {/* Reviews */}
+          <h2 className="text-3xl font-bold mb-4 text-blue-300">
+            Reviews
+          </h2>
+
+          <div className="bg-gray-800 p-6 rounded-2xl">
+            <p>
+              ⭐ Students have rated this college {college.rating}/5 based on
+              academics, placements and campus life.
+            </p>
+          </div>
+
           <Link
             href="/"
-            className="inline-block mt-8 bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-xl transition"
+            className="inline-block mt-8 bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-xl"
           >
             Back to Home
           </Link>
+
         </div>
       </div>
     </div>

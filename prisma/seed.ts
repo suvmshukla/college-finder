@@ -10,23 +10,26 @@ async function main() {
         location: "Jharkhand",
         fees: 120000,
         rating: 4.5,
-        description: "Top engineering institute in Jharkhand"
+        placements: "15 LPA",
+        description: "Top engineering institute in Jharkhand",
       },
       {
         name: "BIT Mesra",
         location: "Ranchi",
         fees: 200000,
         rating: 4.3,
-        description: "Famous private engineering institute"
+        placements: "12 LPA",
+        description: "Famous private engineering institute",
       },
       {
         name: "IIT Patna",
         location: "Bihar",
         fees: 150000,
         rating: 4.8,
-        description: "Premier IIT in Bihar"
-      }
-    ]
+        placements: "18 LPA",
+        description: "Premier IIT in Bihar",
+      },
+    ],
   });
 
   console.log("Data Inserted Successfully");
